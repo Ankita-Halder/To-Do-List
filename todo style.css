@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;   /* stack elements vertically */
+  align-items: center;      /* keep them centered horizontally */
+  justify-content: flex-start; /* push content to the top */
+  background-color: rgb(168, 165, 233);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding-top: 20px;        /* optional spacing from very top */
+}
+.todo-title {
+  font-size: 32px;
+  color:black;
+}
+
+
+.todo-container {
+  background: rgba(255,255,255,0.9);
+  padding: 25px;
+  border-radius: 25px;
+  max-height: 300px;
+  width: 450px;
+  margin-top: 10px; 
+}
+
+h1{
+  color:black;
+  font-size:30px;
+  margin-top: 10px 0;
+
+}
+ul{
+  padding:0;
+
+}
+li{
+  display:flex;
+  text-align:center;
+  margin:10px;
+  font-size:20px;
+
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+
+li.completed::before {
+  content: "✔️";
+  margin-right: 8px;
+  color: #2ecc71;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.add-task {
+  display: flex;
+  margin-top: 15px;
+  gap: 10px; 
+}
+
+.add-task textarea {
+  flex: 1;              
+  width: 100%;          
+  min-height: 50px;
+  max-height: 130px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #333;
+  font-size: 16px;
+  resize: none;
+  overflow-y: auto;
+   
+
+}
+
+.add-task button {
+  margin-left: 8px;
+  padding: 10px 14px;
+  background: #5418a9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  
+}
+.add-task button:hover {
+  background: #1f2279;
+}
+
+.controls{
+  display:flex;
+  border-radius:5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#delete-all {
+  background-color:#f2412d;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border:none;
+  margin-top:10px;
+}
+  
+
+#reset {
+  background-color:	#9a72db;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border:none;
+  margin-top:10px;
+ 
+}
